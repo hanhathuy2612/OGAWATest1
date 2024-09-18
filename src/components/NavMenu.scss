@@ -1,0 +1,36 @@
+.NavMenu {
+  display: flex;
+  gap: 40px;
+
+  .NavItem {
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    transition: 0.3s;
+
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--text);
+
+    &::after {
+      content: '';
+      display: none;
+      width: calc(100% + 20px);
+      height: 4px;
+      position: absolute;
+      top: calc(100% + 17px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #222222;
+      transition: display 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
